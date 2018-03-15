@@ -13,13 +13,20 @@ class Rocket(object):
         body = Rectangle(Point(x,y),Point(x +55, y +275))
         body.setFill(color_rgb(95,95,95))
         engin = Polygon(Point(x,y +275),Point(x +55,y +275),Point(x +75,y +300),Point(x -25,y + 300))
-        engin.setFill('black')
+        engin.setFill('white')
         cap = Polygon(Point(x,y),Point(x +25,y -25),Point(x +55,y))
         cap.setFill(color_rgb(63, 59, 59))
         body.draw(win)
         engin.draw(win)
         cap.draw(win)
-
+        bar = Line(Point(380,400),Point(400,400))
+        bar.setWidth(10)
+        bar2 = Line(Point(550, 400), Point(575, 400))
+        bar2.setWidth(10)
+        bar.draw(win)
+        bar2.draw(win)
+        bar.setFill('white')
+        bar2.setFill('white')
 
 
 
@@ -48,10 +55,8 @@ class Capsule(object):
         eng2 = Rectangle(Point(425,575),Point(525,600))
         eng1.draw(win)
         eng2.draw(win)
-        eng1.setFill(color_rgb(178, 19, 19))
-        eng2.setFill('black')
-
-
+        eng1.setFill('grey')
+        eng2.setFill('white')
 
 
 
