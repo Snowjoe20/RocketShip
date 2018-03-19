@@ -31,13 +31,14 @@ class Rocket(object):
 
 
 
-class Capsule(object):
+class Capsule(Rocket):
     def __init__(self,x,y,win):
+        super(Capsule,self).__init__(x,y,win)
         self.drawBody(win)
         self.drawEng(win)
         self.drawTop(win,x,y)
     def drawTop(self, win,x,y):
-        cap = Polygon(Point(x,y),Point(x,y - 50),Point(x + 50,y - 100),Point(x + 100,y - 100),Point(x + 150,y - 50),Point(x + 150,y))
+        cap = Polygon(Point(self.x,self.y),Point(self.x,self.y - 50),Point(self.x + 50,self.y - 100),Point(self.x + 100,self.y - 100),Point(self.x + 150,self.y - 50),Point(self.x + 150,self.y))
         cap.setFill(color_rgb(119, 23, 23))
         cap.draw(win)
         pole = Rectangle(Point(450,50), Point(500,150))
