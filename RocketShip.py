@@ -47,6 +47,8 @@ class Capsule(Rocket):
         tri = Polygon(Point(450,50), Point(475,25), Point(500,50))
         tri.draw(win)
         tri.setFill(color_rgb(63, 59, 59))
+        image1 = Image(Point(475, 100), "capLogo.png")
+        image1.draw(win)
     def drawBody(self, win):
         body = Rectangle(Point(400,250),Point(550,525))
         body.draw(win)
